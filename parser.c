@@ -32,7 +32,7 @@ T_statement parse_statement() {
 
 T_expression parse_expression() {
     T_token operand1 = get_lookahead();
-    if (NUMBER != operand1->kind) parse_error();
+    if (NUMBER != operand1->kind) parser_error();
     next_token();
 
     T_token operator = get_lookahead();
