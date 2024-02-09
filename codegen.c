@@ -1,7 +1,7 @@
 #include "codegen.h"
 
 void gencode_statement_list(T_statement_list statement_list) {
-    while(NULL  != statement_list) {
+    while(NULL != statement_list) {
         gencode_statement(statement_list->statement);
         statement_list = statement_list->statement_list;
     }
