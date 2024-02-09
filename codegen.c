@@ -14,7 +14,7 @@ void gencode_statement(T_statement statement) {
 void gencode_expression(T_expression expression) {
     printf("\n");
     printf("\tmovl $%d, %%eax\n", expression->operand1->number);
-    printf("\tmovl $%ebx\n", expression->operand2->number);
+    printf("\tmovl $%d, %%ebx\n", expression->operand2->number);
     switch(expression->operator->character) {
         case '+':
             printf("\taddl %%ebx, %%eax\n");
