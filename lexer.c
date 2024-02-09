@@ -11,7 +11,7 @@ T_token lex() {
     if (EOF == c) 
         return create_end_token();
     else if (isdigit(c))
-        return create_end_token(c);
+        return create_number_token(c);
     else if (isspace(c))
         return lex();
     else if (';' == c)
