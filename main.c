@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lexer.h"
 #include "parser.h"
 #include "codegen.h"
@@ -10,4 +11,4 @@ int main(int argc, char **argv) {
   gencode_statement_list(statement_list);
 
   return 0;
-}
+} 
